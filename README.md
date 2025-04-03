@@ -2,6 +2,9 @@
 
 - Create vite 
 - Config Tailwind Css
+- Header
+- Login Form
+- Sign Up
 
 
 
