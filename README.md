@@ -3,9 +3,17 @@
 - Create vite 
 - Config Tailwind Css
 - Header
+- Routing of App
 - Login Form
 - Sign Up
-
+- Form validation
+- useRef Hook
+- Firebase Setup
+- Deploying our app to production
+- Create SignUp User Account
+- Implement Sign In user Api
+- Created Redux Store with userSlice
+- Implemented Sign Out
 
 
 # Features
@@ -18,7 +26,7 @@
         - tailer in Background
         - Title & Desciption
         - MovieSuggestions
-            - MovieLists * N
+            - MovieLists 
 - NetFlixGPT
-    -Search Bar
-    -Movie Suggestions
+    - Search Bar
+    - Movie Suggestions
