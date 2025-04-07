@@ -3,14 +3,13 @@ import Header from './Header'
 import checkValidData from '../utils/validate'
 import {  createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { SMILE_LOGO } from '../utils/constant';
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] =useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   
   const name = useRef(null);
@@ -31,12 +30,11 @@ const Login = () => {
         .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, {
-          displayName: name.current.name, photoURL: "https://example.com/jane-q-user/profile.jpg"
+          displayName: name.current.name, photoURL: SMILE_LOGO
         }).then(() => {
           // Profile updated!
           const {uid,email,displayName,photoURL} = auth.currentUser;
             dispatch(addUser({uid: uid,email: email,displayName: displayName, photoURL: photoURL}))
-          navigate("/browse")
         }).catch((error) => {
           // An error occurred
           // ...
@@ -60,7 +58,6 @@ const Login = () => {
         .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        navigate("/browse")
          })
         .catch((error) => {
         const errorCode = error.code;
@@ -92,10 +89,10 @@ const Login = () => {
             <input ref={name} type="text" placeholder='Full Name' className='bg-black/30 border-1 border-white/30  rounded-sm my-2 p-4 w-full' />
           )}
 
-          <input ref={email} type="text" placeholder='Email or mobile Number' className='bg-black/30 border-1 border-white/30  rounded-sm my-2 p-4 w-full' />
+          <input ref={email} type="text" placeholder='Email or mobile Number' className='focus:outline-black bg-black/30 border-1 border-white/30  rounded-sm my-2 p-4 w-full' />
           
 
-          <input ref={password} type="password" placeholder='Password' className='bg-black/30 border-1 border-white/30  rounded-sm my-2 p-4 w-full' />
+          <input ref={password} type="password" placeholder='Password' className='focus:outline-black bg-black/30 border-1 border-white/30  rounded-sm my-2 p-4 w-full' />
           <p className='text-red-500 text-sm py-2'>{errorMessage}</p>
 
           <button className='p-2 my-3 bg-red-600 w-full rounded-sm cursor-pointer' onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
