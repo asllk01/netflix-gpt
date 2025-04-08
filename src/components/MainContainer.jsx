@@ -9,11 +9,10 @@ const MainContainer = () => {
   
   const mainMovie = movies[0];
   const {Title,Year} = mainMovie;
-  console.log(Title,Year);
   
   
   return (
-    <div>
+    <div className='bg-black'>
         <VideoTitle title={Title} year={Year}/>
         <VideoBackground/>
     </div>

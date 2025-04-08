@@ -3,7 +3,7 @@ import VideoFile from '../assets/video.mp4'
 
 const VideoBackground = () => {
   return (
-    <div className=' min-w-screen max-h-[710px] top-0 left-0 absolute -z-10 overflow-hidden'>
+    <div className=' min-w-screen max-h-screen top-0 left-0 absolute z-10 overflow-hidden '>
        <video
        
         autoPlay

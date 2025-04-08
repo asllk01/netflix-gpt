@@ -9,10 +9,12 @@ const Browse = () => {
   useNowPlayingMovies();
 
   return (
-    <div className='min-w-screen'>
+    <div className='min-w-screen '>
       <Header/>
-      <MainContainer/>
-      <SecondaryContainer/>
+      <div className=''>
+        <MainContainer/>
+        <SecondaryContainer/>
+      </div>
     </div>
   )
 }

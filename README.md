@@ -26,6 +26,10 @@
 - Planning for Maincontainer and Secondary Container
 - Fetch Movies data from omdb
 - Add video to Main Container
+- Build Secondary component
+- Build Movie List
+- Build Movie Card
+- Made the Browse page with Tailwind Css
 
 
 # Features
