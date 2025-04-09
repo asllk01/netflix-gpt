@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { API_KEY, API_OPTIONS } from '../utils/constant';
-import { useDispatch } from 'react-redux';
+import { API_KEY} from '../utils/constant';
+import { useDispatch, useSelector } from 'react-redux';
 import {addNowPlayingMovies} from "../utils/movieSlice"
 
 
@@ -9,9 +9,10 @@ import {addNowPlayingMovies} from "../utils/movieSlice"
 const useNowPlayingMovies = ()=>{
      // fetch data from omdb api and update store
   const dispatch = useDispatch();
+  const nowPlayingMovies = useSelector(store => store.movies.nowPlayingMovies)
 
   const getNowPlayingMovies = async () => {
-    const data1 = await fetch("https://www.omdbapi.com/?s=marvel&"+API_KEY+"&page=1", API_OPTIONS );
+    const data1 = await fetch("https://www.omdbapi.com/?s=marvel&"+API_KEY+"&page=1");
     const json = await data1.json();
     const data2 = await fetch(
       "https://www.omdbapi.com/?s=spider&"+API_KEY+"&page=1"
@@ -30,7 +31,7 @@ const useNowPlayingMovies = ()=>{
   };
   
   useEffect(() => {
-    getNowPlayingMovies();
+    !nowPlayingMovies && getNowPlayingMovies();
   }, []);
 }
 

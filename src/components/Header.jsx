@@ -5,12 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { NET_LOGO, SMILE_LOGO } from '../utils/constant';
+import { toogleGptSearchView } from '../utils/gptSlice';
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const showGptSearch = useSelector((store)=> store.gpt.showGptSearch);
+
   const user = useSelector((store)=> store.user)
   const handleSignOut = ()=>{
+
 
     signOut(auth)
     .then(() => {
@@ -34,6 +39,10 @@ const Header = () => {
       });
       return ()=> unsubscribe();
   }, [])
+
+  const handleGPTSearchClick = ()=>{
+      dispatch(toogleGptSearchView());
+  }
   return (
     <div className='absolute z-50 flex justify-between items-center w-screen px-8 py-2 bg-gradient-to-b from-black'>
       <img 
@@ -41,6 +50,7 @@ const Header = () => {
       src={NET_LOGO} alt="logo" />
 
       {user && (<div className='flex items-center px-8'>
+        <button className='text-white font-medium mr-6 bg-purple-700 px-2 py-1 rounded cursor-pointer ' onClick={handleGPTSearchClick} > {showGptSearch ? "🏠︎" : "GPT 🔍︎"}</button>
         <img
         className='w-10 h-10'
          src= {SMILE_LOGO} alt="logo" />

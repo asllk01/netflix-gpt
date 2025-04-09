@@ -4,21 +4,12 @@ export const SMILE_LOGO ="https://coulditbemyeyes.com/wp-content/uploads/2012/05
 
 const API_ACCES_TOKN =  'eyJhbGciOiJlUzI1NiJ9.eyJhdWQiOil5Zjk2NjYzMWUxNTIzYzE4MWVlYjg2YWNkNzZiMzJkNilsInN1YiI6IjY0Y2EwZGJhYmYWOWQxMDEwMWYxODk2YilsInNb3Blcyl6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uljoxfQ.Y3RpHbTXBaxBgtKNokY1bssYf3BVYM746QHHmRFwjW8';
 
-
-// eyJhbGciOiJlUzI1NiJ9.eyJhdWQiOil5Zjk2NjYzMWUxNTIzYzE4MWVlYjg2YWNkNzZiMzJkNilsInN1YiI6IjY0Y2EwZGJhYmYWOWQxMDEwMWYxODk2YilsInN
-// b3Blcyl6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uljoxfQ.Y3RpHbTXBaxBgtKNokY1bssYf3BVYM746QHHmRFwjW8
-
-// api tmdb 9f966631e1523c181eeb86acd76b32d6
+export const  BG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/98df3030-1c2b-4bd1-a2f5-13c611857edb/web/IN-en-20250331-TRIFECTA-perspective_247b6f06-c36d-4dff-a8eb-4013325c3f8e_large.jpg"
 
 
-export const API_KEY="apikey=a165b23a";
+ export const API_KEY="apikey=a165b23a";
 
-export const API_OPTIONS = {
-    method: 'GET',
-    headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZTNlNzNlZDIwY2M2Y2NhNWQ4YWVjMjQzNTdlNDc1ZCIsInN1YiI6IjY2MjIyMDFhYWUzODQzMDE4NzJhNTJjMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vPDW2QwNr9hIRd0vJx_x8hbHnDYZGHMtnZwfkqb3J8U'
-},
-  };
+
+
 
   

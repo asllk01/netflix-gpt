@@ -30,6 +30,9 @@
 - Build Movie List
 - Build Movie Card
 - Made the Browse page with Tailwind Css
+- GPT Search Feature
+- GPT Search Page 
+- GPT Search Bar
 
 
 # Features
