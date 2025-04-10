@@ -33,7 +33,9 @@
 - GPT Search Feature
 - GPT Search Page 
 - GPT Search Bar
-
+- Memoization
+- Movie Search and get Movie suggestions
+- Made our Site Responsive
 
 # Features
 - Login/Sign Up

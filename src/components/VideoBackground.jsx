@@ -3,13 +3,13 @@ import VideoFile from '../assets/video.mp4'
 
 const VideoBackground = () => {
   return (
-    <div className=' min-w-screen max-h-screen top-0 left-0 absolute z-10 overflow-hidden '>
+    <div className='top-30 min-w-screen md:min-w-screen md:max-h-screen md:top-0 md:left-0 absolute z-10  '>
        <video
        
         autoPlay
         loop
         muted
-        className="min-w-[100%]  "
+        className="min-w-screen  "
        >
         <source  src={VideoFile} type="video/mp4" />
         Your browser does not support the video tag.

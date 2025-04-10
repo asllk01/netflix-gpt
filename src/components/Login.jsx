@@ -15,6 +15,7 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  
 
   // using regex for validate the form
   const handleButtonClick = ()=>{
@@ -62,6 +63,9 @@ const Login = () => {
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorMessage,errorCode);
+        setErrorMessage("Invalid Credential");
+        
         
         
         });
@@ -72,6 +76,9 @@ const Login = () => {
 
   const toogleSignInForm = ()=>{
     setIsSignInForm(!isSignInForm)
+    setErrorMessage(null);
+    email.current.value=null;
+    password.current.value=null;
   }
 
   return (

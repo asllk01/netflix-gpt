@@ -14,7 +14,7 @@ const Browse = () => {
   
 
   return (
-    <div className='min-w-screen '>
+    <div className='w-full '>
       <Header/>
       {
         showGptSearch ? <GptSeach/> : <><MainContainer/>

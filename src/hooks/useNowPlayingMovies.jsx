@@ -14,12 +14,17 @@ const useNowPlayingMovies = ()=>{
   const getNowPlayingMovies = async () => {
     const data1 = await fetch("https://www.omdbapi.com/?s=marvel&"+API_KEY+"&page=1");
     const json = await data1.json();
+    const datam = await fetch("https://www.omdbapi.com/?s=money heist&"+API_KEY+"&page=1");
+    const jsonm = await datam.json();
     const data2 = await fetch(
       "https://www.omdbapi.com/?s=spider&"+API_KEY+"&page=1"
     )
     const json2 = await data2.json();
     const allMovie = [];
     allMovie.push(...json.Search);
+    console.log(jsonm.Search.slice(0,4));
+    
+    allMovie.splice(2,0,...jsonm.Search.slice(0,4));
     if(json2.Response=="True"){allMovie.push(...json2.Search)}
     const data3 = await fetch(
       "https://www.omdbapi.com/?s=dead&"+API_KEY+"&page=1"
